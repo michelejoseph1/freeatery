@@ -18,6 +18,8 @@ db.py:
   class Users (db.Model):
     Model representing users of the app.
 
+    Columns: id, OAuth? requirements
+
   class Posts (db.Model):
     Model representing posts about free food. 
     
@@ -25,11 +27,17 @@ db.py:
 
     A many to one relationship with users
 
+    Columns: id, description, image URL, vegan, vegetarian, gluten free, dairy 
+    free, nut free, allergens
+
   class Location (db.Model):
     Model representing the location of food. A one to many relationship with posts.
 
+    Columns: id, name, coordinates (latitude, longitude for google)
+
 app.py:
   GET /posts/ gets all posts
+  GET /users/ gets all users
   GET /posts/<int:id>/ gets information about a specific post
   GET /users/<int:id>/ gets information about a specific user
   GET /posts/filter/ gets all posts of free food with some dietary restrictions
@@ -38,6 +46,8 @@ app.py:
   POST /posts/ to create a new post
   POST /user/ to create a new user
 
-  UPDATE /posts/<int:id>/ to update a post
+  UPDATE /posts/<int:id>/ updates a post with id
+  UPDATE /users/<int:id>/ updates a user with id
 
   DELETE /posts/<int:id>/ to delete a post
+  DELETE /posts/closed/ deletes all food at a location

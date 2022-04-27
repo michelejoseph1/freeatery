@@ -4,8 +4,8 @@ changed (location, description, etc), and delete the post once the food is gone.
 
 When posting about free food, users MUST specify the location of the food and may
 add other information including a description, group which the food is from, whether
-the food is vegan, vegetarian, dairy free, gluten free, or nut free. All of these
-fields can be updated.
+the food is vegan, vegetarian, dairy free, gluten free, or nut free, and any allergens.
+All of these fields can be updated.
 
 When browsing the available options, users can filter by a dietary type. In addition, 
 the browse panel will sort by distance of the users location to location. In 
